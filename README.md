@@ -8,4 +8,4 @@ https://bom.firpo.ru/Public/86
 
 Страница 23-25 пример задания по демоэкзамену. 
 
-Доска: 
+Доска: https://ru.yougile.com/board/3taxw03x0hjp
