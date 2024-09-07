@@ -9,3 +9,5 @@ https://bom.firpo.ru/Public/86
 Страница 23-25 пример задания по демоэкзамену. 
 
 Доска: https://ru.yougile.com/board/3taxw03x0hjp
+
+Видео по дистанту: https://drive.google.com/file/d/1OMzGNYCr31Zi6EgKqHhheNGERmNOhvxs/view?usp=sharing
