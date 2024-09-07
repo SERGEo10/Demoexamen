@@ -11,3 +11,5 @@ https://bom.firpo.ru/Public/86
 Доска: https://ru.yougile.com/board/3taxw03x0hjp
 
 Видео по дистанту: https://drive.google.com/file/d/1OMzGNYCr31Zi6EgKqHhheNGERmNOhvxs/view?usp=sharing
+
+Зеркало на папку с видео: https://drive.google.com/drive/folders/19MY8OBAlu8oXtgOV6MSWU2U9FvWBRESr?usp=drive_link
