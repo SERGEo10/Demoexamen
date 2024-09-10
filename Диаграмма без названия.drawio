@@ -1,0 +1,87 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+  <diagram name="Страница — 1" id="IjGxrO7CnJ05MVfTwEPU">
+    <mxGraphModel dx="1434" dy="848" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ORDCxxn3G8kCC1obVqbB-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ORDCxxn3G8kCC1obVqbB-1" target="ORDCxxn3G8kCC1obVqbB-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ORDCxxn3G8kCC1obVqbB-1" value="Заказчик&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="430" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ORDCxxn3G8kCC1obVqbB-3" value="Учёт заявок оргтехники" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="230" width="890" height="810" as="geometry" />
+        </mxCell>
+        <mxCell id="ORDCxxn3G8kCC1obVqbB-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="ORDCxxn3G8kCC1obVqbB-3" source="ORDCxxn3G8kCC1obVqbB-7" target="ORDCxxn3G8kCC1obVqbB-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ORDCxxn3G8kCC1obVqbB-40" value="extend&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ORDCxxn3G8kCC1obVqbB-39">
+          <mxGeometry x="0.056" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ORDCxxn3G8kCC1obVqbB-7" value="Заказ запчастей" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="ORDCxxn3G8kCC1obVqbB-3">
+          <mxGeometry x="410" y="505" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ORDCxxn3G8kCC1obVqbB-2" value="Исполнение заявки" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="ORDCxxn3G8kCC1obVqbB-3">
+          <mxGeometry x="617" y="500" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ORDCxxn3G8kCC1obVqbB-22" value="Оставляет заявку&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="ORDCxxn3G8kCC1obVqbB-3">
+          <mxGeometry x="40" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ORDCxxn3G8kCC1obVqbB-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="ORDCxxn3G8kCC1obVqbB-3" source="ORDCxxn3G8kCC1obVqbB-22" target="ORDCxxn3G8kCC1obVqbB-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ORDCxxn3G8kCC1obVqbB-25" value="Редактирование заявки" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="ORDCxxn3G8kCC1obVqbB-3">
+          <mxGeometry x="60" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ORDCxxn3G8kCC1obVqbB-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.417;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;" edge="1" parent="ORDCxxn3G8kCC1obVqbB-3" source="ORDCxxn3G8kCC1obVqbB-25" target="ORDCxxn3G8kCC1obVqbB-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ORDCxxn3G8kCC1obVqbB-27" value="Регистрация заявки" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="ORDCxxn3G8kCC1obVqbB-3">
+          <mxGeometry x="680" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ORDCxxn3G8kCC1obVqbB-29" value="Присвоение уникального идентификатора заявки" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="ORDCxxn3G8kCC1obVqbB-3">
+          <mxGeometry x="490" y="100" width="120" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="ORDCxxn3G8kCC1obVqbB-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="ORDCxxn3G8kCC1obVqbB-3" source="ORDCxxn3G8kCC1obVqbB-35" target="ORDCxxn3G8kCC1obVqbB-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="640" />
+              <mxPoint x="630" y="640" />
+              <mxPoint x="630" y="565" />
+              <mxPoint x="638" y="565" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ORDCxxn3G8kCC1obVqbB-42" value="extend" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ORDCxxn3G8kCC1obVqbB-41">
+          <mxGeometry x="0.2294" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ORDCxxn3G8kCC1obVqbB-35" value="Координация работ" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="ORDCxxn3G8kCC1obVqbB-3">
+          <mxGeometry x="410" y="660" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ORDCxxn3G8kCC1obVqbB-43" value="Предоставить отчёт" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="ORDCxxn3G8kCC1obVqbB-3">
+          <mxGeometry x="760" y="400" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ORDCxxn3G8kCC1obVqbB-44" value="просмотреть все свои заявки (поиск по id):" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="ORDCxxn3G8kCC1obVqbB-3">
+          <mxGeometry x="550" y="680" width="310" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ORDCxxn3G8kCC1obVqbB-15" value="Оператор сервисного центра&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="430" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ORDCxxn3G8kCC1obVqbB-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="ORDCxxn3G8kCC1obVqbB-16" target="ORDCxxn3G8kCC1obVqbB-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ORDCxxn3G8kCC1obVqbB-16" value="Мастер&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="730" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ORDCxxn3G8kCC1obVqbB-17" value="Менеджер&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="710" width="30" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
