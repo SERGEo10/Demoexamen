@@ -18,7 +18,7 @@ https://bom.firpo.ru/Public/86
 
 # Скрины установленного ПО:
 
-QTCreator
+**QTCreator**
 ![image](https://github.com/user-attachments/assets/436b2ca4-2ca5-4865-ae85-01f04041ba9d)
 
 VS Code
