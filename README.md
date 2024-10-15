@@ -16,6 +16,8 @@ https://bom.firpo.ru/Public/86
 
 Зеркало на папку с видео: https://drive.google.com/drive/folders/19MY8OBAlu8oXtgOV6MSWU2U9FvWBRESr?usp=drive_link
 
+Скрины установленного ПО:
+
 QTCreator
 ![image](https://github.com/user-attachments/assets/436b2ca4-2ca5-4865-ae85-01f04041ba9d)
 
