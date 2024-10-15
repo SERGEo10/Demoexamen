@@ -33,3 +33,6 @@ https://bom.firpo.ru/Public/86
 **DBeaver**
 ![image](https://github.com/user-attachments/assets/2042b13a-e9cf-4f85-a6ed-7102de6e3323)
 
+# Полюс заявки задание 2024
+![image](https://github.com/user-attachments/assets/c521e407-ee3a-4202-a6a3-6c04063a7d5d)
+
