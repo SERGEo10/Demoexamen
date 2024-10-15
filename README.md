@@ -1,6 +1,6 @@
 # Demoexamen
 
-[https://ru.yougile.com/board/50w5pze86m21](https://ru.yougile.com/board/3taxw03x0hjp)
+[https://ru.yougile.com/board/50w5pze86m21](https://ru.yougile.com/board/3taxw03x0hjp) - YouGile доска под демоэкзамен
 
 https://bom.firpo.ru/Public/86
 
