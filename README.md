@@ -1,5 +1,7 @@
 # Demoexamen
 
+https://ru.yougile.com/board/50w5pze86m21
+
 https://bom.firpo.ru/Public/86
 
 ![image](https://github.com/user-attachments/assets/55c003bb-a684-4dce-8bf9-da0e11a69330)
