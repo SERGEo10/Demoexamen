@@ -38,48 +38,37 @@ https://bom.firpo.ru/Public/86
 
 
 
-
-
-#  widget - это имя, присваиваемое компоненту пользовательского интерфейса,
-#  с которым пользователь может взаимодействовать 
 import sqlite3
 from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import (    
-    QDialog # это базовый класс диалогового окна
-)
+from PyQt5.QtWidgets import QDialog
+from PyQt5.uic import loadUi
 
-from PyQt5.uic import loadUi # загрузка интерфейса, созданного в Qt Creator
-
-# Окно приветствия
 class WelcomeScreen(QDialog):
-    """
-    Это класс окна приветствия.
-    """
     def __init__(self):
-        """
-        Это конструктор класса
-        """
         super(WelcomeScreen, self).__init__()
-        loadUi("welcomescreen.ui",self) # загружаем интерфейс
+        loadUi("welcomescreen.ui", self)  # загружаем интерфейс
         self.PasswordField.setEchoMode(QtWidgets.QLineEdit.Password)
         self.SignInButton.clicked.connect(self.signupfunction)
+    
     def signupfunction(self):
         user = self.LoginField.text()
         password = self.PasswordField.text()
         print(user, password)
 
-        if len(user)==0 or len(password)==0:
+        if len(user) == 0 or len(password) == 0:
             self.ErrorField.setText("Заполните все поля")
         else:
-            self.ErrorField.setText("Все ок")
-        conn = sqlite3.connect("uchet.db")
-        cur = conn.cursor()
+            conn = sqlite3.connect("uchet.db")
+            cur = conn.cursor()
 
-        user_info = [user, password]
-        cur.execute('SELECT typeID FROM users WHERE login=(?) and password=(?)', user_info) 
-        typeUser = cur.fetchone()
-        print(typeUser[0])                      
+            user_info = [user, password]
+            cur.execute('SELECT typeID FROM users WHERE login=(?) and password=(?)', user_info) 
+            typeUser = cur.fetchone()
 
-        conn.commit()
-        conn.close()
-        
+            if typeUser is not None:
+                # Если авторизация успешна, переключаемся на другую страницу
+                self.ErrorField.setText("Авторизация успешна!")
+                self.parentWidget().setCurrentIndex(1)  # Переключаемся на страницу с индексом 1
+            else:
+                self.ErrorField.setText("Неверный логин или пароль")
+
