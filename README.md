@@ -38,23 +38,37 @@ https://bom.firpo.ru/Public/86
 
 
 
-def signupfunction(self):
-    user = self.LoginField.text()
-    password = self.PasswordField.text()
+class WelcomeScreen(QDialog):
+    def __init__(self):
+        super(WelcomeScreen, self).__init__()
+        loadUi("welcomescreen.ui", self)  # загружаем интерфейс
+        self.PasswordField.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.SignInButton.clicked.connect(self.signupfunction)
 
-    if len(user) == 0 or len(password) == 0:
-        self.ErrorField.setText("Заполните все поля")
-    else:
-        conn = sqlite3.connect("uchet.db")
-        cur = conn.cursor()
+    def signupfunction(self):
+        user = self.LoginField.text()
+        password = self.PasswordField.text()
 
-        user_info = [user, password]
-        cur.execute('SELECT typeID FROM users WHERE login=(?) and password=(?)', user_info)
-        typeUser = cur.fetchone()
-
-        if typeUser is not None:
-            # Авторизация успешна, переключаем страницу
-            self.ErrorField.setText("Авторизация успешна!")
-            self.parentWidget().setCurrentIndex(1)  # Переключаем на следующую страницу
+        if len(user) == 0 or len(password) == 0:
+            self.ErrorField.setText("Заполните все поля")
         else:
-            self.ErrorField.setText("Неверный логин или пароль")
+            conn = sqlite3.connect("uchet.db")
+            cur = conn.cursor()
+
+            user_info = [user, password]
+            cur.execute('SELECT typeID FROM users WHERE login=(?) and password=(?)', user_info)
+            typeUser = cur.fetchone()
+
+            if typeUser is not None:
+                self.ErrorField.setText("Авторизация успешна!")
+                # Переключаемся на страницу оператора
+                self.go_to_operator_page()
+            else:
+                self.ErrorField.setText("Неверный логин или пароль")
+
+    def go_to_operator_page(self):
+        # Доступ к родительскому виджету и переключение на следующую страницу
+        widget = self.parentWidget()
+        if widget is not None:
+            widget.setCurrentIndex(1)  # Переключаемся на страницу с индексом 1
+
