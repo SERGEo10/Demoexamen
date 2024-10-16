@@ -38,37 +38,23 @@ https://bom.firpo.ru/Public/86
 
 
 
-import sqlite3
-from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QDialog
-from PyQt5.uic import loadUi
+def signupfunction(self):
+    user = self.LoginField.text()
+    password = self.PasswordField.text()
 
-class WelcomeScreen(QDialog):
-    def __init__(self):
-        super(WelcomeScreen, self).__init__()
-        loadUi("welcomescreen.ui", self)  # загружаем интерфейс
-        self.PasswordField.setEchoMode(QtWidgets.QLineEdit.Password)
-        self.SignInButton.clicked.connect(self.signupfunction)
-    
-    def signupfunction(self):
-        user = self.LoginField.text()
-        password = self.PasswordField.text()
-        print(user, password)
+    if len(user) == 0 or len(password) == 0:
+        self.ErrorField.setText("Заполните все поля")
+    else:
+        conn = sqlite3.connect("uchet.db")
+        cur = conn.cursor()
 
-        if len(user) == 0 or len(password) == 0:
-            self.ErrorField.setText("Заполните все поля")
+        user_info = [user, password]
+        cur.execute('SELECT typeID FROM users WHERE login=(?) and password=(?)', user_info)
+        typeUser = cur.fetchone()
+
+        if typeUser is not None:
+            # Авторизация успешна, переключаем страницу
+            self.ErrorField.setText("Авторизация успешна!")
+            self.parentWidget().setCurrentIndex(1)  # Переключаем на следующую страницу
         else:
-            conn = sqlite3.connect("uchet.db")
-            cur = conn.cursor()
-
-            user_info = [user, password]
-            cur.execute('SELECT typeID FROM users WHERE login=(?) and password=(?)', user_info) 
-            typeUser = cur.fetchone()
-
-            if typeUser is not None:
-                # Если авторизация успешна, переключаемся на другую страницу
-                self.ErrorField.setText("Авторизация успешна!")
-                self.parentWidget().setCurrentIndex(1)  # Переключаемся на страницу с индексом 1
-            else:
-                self.ErrorField.setText("Неверный логин или пароль")
-
+            self.ErrorField.setText("Неверный логин или пароль")
