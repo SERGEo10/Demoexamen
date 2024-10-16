@@ -36,3 +36,50 @@ https://bom.firpo.ru/Public/86
 # Полюс заявки задание 2024
 ![image](https://github.com/user-attachments/assets/c521e407-ee3a-4202-a6a3-6c04063a7d5d)
 
+
+
+
+
+#  widget - это имя, присваиваемое компоненту пользовательского интерфейса,
+#  с которым пользователь может взаимодействовать 
+import sqlite3
+from PyQt5 import QtWidgets
+from PyQt5.QtWidgets import (    
+    QDialog # это базовый класс диалогового окна
+)
+
+from PyQt5.uic import loadUi # загрузка интерфейса, созданного в Qt Creator
+
+# Окно приветствия
+class WelcomeScreen(QDialog):
+    """
+    Это класс окна приветствия.
+    """
+    def __init__(self):
+        """
+        Это конструктор класса
+        """
+        super(WelcomeScreen, self).__init__()
+        loadUi("welcomescreen.ui",self) # загружаем интерфейс
+        self.PasswordField.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.SignInButton.clicked.connect(self.signupfunction)
+    def signupfunction(self):
+        user = self.LoginField.text()
+        password = self.PasswordField.text()
+        print(user, password)
+
+        if len(user)==0 or len(password)==0:
+            self.ErrorField.setText("Заполните все поля")
+        else:
+            self.ErrorField.setText("Все ок")
+        conn = sqlite3.connect("uchet.db")
+        cur = conn.cursor()
+
+        user_info = [user, password]
+        cur.execute('SELECT typeID FROM users WHERE login=(?) and password=(?)', user_info) 
+        typeUser = cur.fetchone()
+        print(typeUser[0])                      
+
+        conn.commit()
+        conn.close()
+        
